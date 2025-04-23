@@ -1,0 +1,23 @@
+.skills-section {
+    background-color: #ffffff;
+    color: #343a40;
+  }
+  
+  .skills-section h5 {
+    font-weight: 600;
+    color: #1d3557;
+  }
+  
+  .progress {
+    background-color: #e9ecef;
+    border-radius: 0.5rem;
+    height: 25px;
+  }
+  
+  .progress-bar {
+    background-color: #457b9d;
+    font-weight: bold;
+    line-height: 25px;
+    transition: width 1s ease-in-out;
+  }
+  

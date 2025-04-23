@@ -1,20 +1,76 @@
-.about-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
+/* About.css */
+
+.about-section {
+  padding: 5rem 2rem;
+  background: var(--about-bg);
+  color: var(--text-color);
+  transition: background 0.4s ease, color 0.4s ease;
+  background-image: radial-gradient(circle at top right, rgba(255, 105, 180, 0.1), transparent),
+                    radial-gradient(circle at bottom left, rgba(0, 191, 255, 0.1), transparent);
+}
+
+.about-section .container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideIn 1s ease forwards;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  color: var(--subtext-color);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.about-section .highlight {
+  font-weight: 600;
+  color: #6e8efb;
+}
+
+/* Light Theme Variables */
+:root {
+  --about-bg: #f9fbfe;
+  --text-color: #222;
+  --subtext-color: #555;
+}
+
+/* Dark Theme Variables */
+.dark {
+  --about-bg: #0e1525;
+  --text-color: #f1f1f1;
+  --subtext-color: #b0b9c9;
+}
+
+/* Animations */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
   }
-  
-  .about-container h1 {
-    color: #222;
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
-  
-  .about-container p {
-    font-size: 18px;
-    color: #555;
-    line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

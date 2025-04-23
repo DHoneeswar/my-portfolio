@@ -1,13 +1,32 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React from 'react';
+import { Typewriter } from 'react-simple-typewriter';
+import './Home.css';
+
 
 const Home = () => {
   return (
-    <div className="text-center py-5">
-      <h1 className="display-4">Welcome to My Portfolio</h1>
-      <p className="lead">Hi, I'm John Doe, a passionate Web Developer.</p>
-    </div>
+    <section className="hero text-center py-5 bg-light">
+      <div className="container">
+        <h1 className="display-4">Hi, I'm John Doe</h1>
+        <h3 className="mt-3 text-secondary">
+          I'm a{' '}
+          <span className="text-primary">
+            <Typewriter
+              words={['Web Developer', 'UI/UX Designer', 'Tech Enthusiast', 'React Wizard']}
+              loop={0}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
+          </span>
+        </h3>
+        <a href="contact" className="btn btn-primary mt-4">Hire Me</a>
+      </div>
+    </section>
   );
 };
+
 
 export default Home;

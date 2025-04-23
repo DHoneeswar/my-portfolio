@@ -1,15 +1,86 @@
-.home-container {
-    text-align: center;
-    padding: 50px;
+/* Home.css */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--hero-bg);
+  color: var(--text-color);
+  transition: background 0.4s ease, color 0.4s ease;
+  background-image: radial-gradient(circle at top left, rgba(0, 128, 255, 0.15), transparent),
+                    radial-gradient(circle at bottom right, rgba(255, 0, 128, 0.1), transparent);
+}
+
+.hero .container {
+  max-width: 900px;
+  padding: 2rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.display-4 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero h3 {
+  font-size: 1.75rem;
+  margin-top: 1.5rem;
+  color: var(--subtext-color);
+  font-weight: 500;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.hero .text-primary {
+  font-weight: 700;
+  background: linear-gradient(90deg, #00f260, #0575e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 2rem;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Light Theme Variables */
+:root {
+  --hero-bg: #f7f9fc;
+  --text-color: #111;
+  --subtext-color: #555;
+}
+
+/* Dark Theme Variables */
+.dark {
+  --hero-bg: #0d1117;
+  --text-color: #e6edf3;
+  --subtext-color: #a5b0c5;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  .home-container h1 {
-    color: #222;
-    font-size: 40px;
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
-  
-  .home-container p {
-    font-size: 20px;
-    color: #555;
-  }
-  
+}

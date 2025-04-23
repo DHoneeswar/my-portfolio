@@ -1,6 +1,8 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/navbar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/footer";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
@@ -8,11 +10,14 @@ import Skills from "./components/Skills";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
 
-const App = () => {
+function App() {
   return (
-    <>
-      <Navbar />
-      <div className="container mt-4">
+    <Router>
+      <div className="App">
+        <ScrollToTop />
+        <Navbar />
+        
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -21,9 +26,11 @@ const App = () => {
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+
+        <Footer />
       </div>
-    </>
+    </Router>
   );
-};
+}
 
 export default App;
