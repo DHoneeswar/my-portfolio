@@ -16,7 +16,7 @@ const projectList = [
   {
     title: "AI Crop Advisor",
     description: "An AI-based recommendation system for crops based on region and season.",
-    link: "https://github.com/yourusername/crop-ai",
+    link: "https://github.com/DHoneeswar/HarvestHub",
   },
 ];
 
